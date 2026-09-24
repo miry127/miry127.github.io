@@ -252,10 +252,20 @@
     .about { background: var(--ivory); }
     .about-copy {
       max-width: 980px;
-      margin: 76px 0 0 auto;
-      font: 500 clamp(2.5rem, 5.8vw, 5.9rem)/1.12 "Playfair Display", "Noto Sans KR", serif;
+      margin: 0 0 66px auto;
+      font: 500 clamp(2.35rem, 5.2vw, 5.3rem)/1.12 "Playfair Display", "Noto Sans KR", serif;
       letter-spacing: -.035em;
     }
+    .about-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .about-fact { min-height: 180px; padding: 26px 24px 30px 0; }
+    .about-fact + .about-fact { padding-left: 24px; border-left: 1px solid var(--line); }
+    .about-fact h3 { margin: 0 0 42px; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; }
+    .about-fact p { margin: 0; line-height: 1.65; }
 
     footer { padding: 82px 6vw 34px; background: var(--paper); }
     .footer-title { margin: 0 0 48px; font: 500 clamp(2.8rem, 6vw, 6rem) "Playfair Display", "Noto Sans KR", serif; }
@@ -293,7 +303,12 @@
       .timeline::before { left: 6px; }
       .award-item { grid-template-columns: 1fr; gap: 10px; padding-left: 33px; }
       .award-item::before { left: 1px; }
-      .about-copy { margin-top: 52px; }
+      .about-copy { margin-bottom: 46px; }
+      .about-facts { grid-template-columns: 1fr 1fr; }
+      .about-fact { min-height: 165px; padding: 23px 18px 26px 0; }
+      .about-fact + .about-fact { padding-left: 18px; }
+      .about-fact:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .about-fact:nth-child(4) { border-top: 1px solid var(--line); }
       footer { padding: 68px 20px 28px; }
     }
 
@@ -308,10 +323,10 @@
       <a class="logo" href="#home" aria-label="홈">MK.</a>
       <nav class="desktop-nav" aria-label="주요 메뉴">
         <a href="#home" data-ko="홈" data-en="Home">홈</a>
+        <a href="#about" data-ko="소개" data-en="About">소개</a>
         <a href="#portfolio" data-ko="포트폴리오" data-en="Portfolio">포트폴리오</a>
         <a href="#awards" data-ko="수상" data-en="Awards">수상</a>
         <a href="#activities" data-ko="활동" data-en="Activities">활동</a>
-        <a href="#about" data-ko="소개" data-en="About">소개</a>
       </nav>
       <div class="header-actions">
         <button class="lang" type="button" aria-label="언어 전환">KO <span>/</span> EN</button>
@@ -322,10 +337,10 @@
 
   <nav class="mobile-nav" id="mobile-menu" aria-label="모바일 메뉴">
     <a href="#home" data-ko="홈" data-en="Home">홈</a>
+    <a href="#about" data-ko="소개" data-en="About">소개</a>
     <a href="#portfolio" data-ko="포트폴리오" data-en="Portfolio">포트폴리오</a>
     <a href="#awards" data-ko="수상" data-en="Awards">수상</a>
     <a href="#activities" data-ko="활동" data-en="Activities">활동</a>
-    <a href="#about" data-ko="소개" data-en="About">소개</a>
   </nav>
 
   <main>
@@ -335,12 +350,38 @@
         <h1>Miryeong<br><em>Kim</em></h1>
         <div class="intro">
           <p data-ko="국경을 넘어 소통하는 창작자" data-en="A creator connecting people across borders.">국경을 넘어 소통하는 창작자</p>
-          <a href="#portfolio" data-ko="대표 작업 보기 ↓" data-en="View selected work ↓">대표 작업 보기 ↓</a>
+          <a href="#about" data-ko="소개 보기 ↓" data-en="Discover more ↓">소개 보기 ↓</a>
         </div>
       </div>
       <div class="hero-visual" aria-label="표지 이미지 영역">
         <span class="monogram" aria-hidden="true">MK</span>
         <p class="visual-note">SEOUL · SAPPORO · BEYOND</p>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2 data-ko="서로 다른 사람과 정보를 연결합니다" data-en="I connect people, ideas, and information across borders">서로 다른 사람과 정보를 연결합니다</h2>
+      </div>
+      <p class="about-copy" data-ko="언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다." data-en="I move across languages and cultures, turning the problems I find into stories and projects.">언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다.</p>
+      <div class="about-facts">
+        <article class="about-fact">
+          <h3 data-ko="배경" data-en="Background">배경</h3>
+          <p data-ko="홋카이도대학교 교환학생 · Uriv 기획 및 운영" data-en="Exchange at Hokkaido University · Founder and lead of Uriv">홋카이도대학교 교환학생 · Uriv 기획 및 운영</p>
+        </article>
+        <article class="about-fact">
+          <h3 data-ko="관심" data-en="Focus">관심</h3>
+          <p data-ko="언어 · 문화 · 정보 격차 · 사람을 잇는 커뮤니케이션" data-en="Language · Culture · Information gaps · Human connection">언어 · 문화 · 정보 격차 · 사람을 잇는 커뮤니케이션</p>
+        </article>
+        <article class="about-fact">
+          <h3 data-ko="작업 방식" data-en="Approach">작업 방식</h3>
+          <p data-ko="관찰 · 기획 · 실행 · 이해하기 쉬운 전달" data-en="Observe · Plan · Execute · Communicate clearly">관찰 · 기획 · 실행 · 이해하기 쉬운 전달</p>
+        </article>
+        <article class="about-fact">
+          <h3 data-ko="일상 밖 관심" data-en="Beyond work">일상 밖 관심</h3>
+          <p data-ko="피겨스케이팅 · 외국어 학습" data-en="Figure skating · Language learning">피겨스케이팅 · 외국어 학습</p>
+        </article>
       </div>
     </section>
 
@@ -440,10 +481,6 @@
       </div>
     </section>
 
-    <section class="section about" id="about">
-      <p class="eyebrow">About</p>
-      <p class="about-copy" data-ko="언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다." data-en="I move across languages and cultures, turning the problems I find into stories and projects.">언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다.</p>
-    </section>
   </main>
 
   <footer>
