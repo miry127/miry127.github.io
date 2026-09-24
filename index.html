@@ -1,48 +1,505 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="국경을 넘어 소통하는 창작자, 김미령의 포트폴리오">
-<title>김미령 — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#102a43;--navy2:#244a66;--ivory:#f5f0e6;--paper:#fbf8f1;--line:rgba(16,42,67,.22)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--navy);background:var(--ivory);font-family:"DM Sans","Noto Sans KR",sans-serif}a{color:inherit;text-decoration:none}
-header{position:absolute;z-index:10;top:0;left:0;width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px 4vw;color:var(--paper)}
-.logo{font:600 1.25rem "Playfair Display",serif}nav{display:flex;gap:30px;font-size:.8rem}nav a{padding:5px 0;border-bottom:1px solid transparent}nav a:hover{border-color:currentColor}
-.lang{justify-self:end;border:0;padding:7px 0;color:inherit;background:transparent;font:inherit;font-size:.75rem;cursor:pointer}.lang span{opacity:.45;padding:0 4px}
-.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:53% 47%;overflow:hidden;color:var(--paper);background:var(--navy)}
-.hero-copy{z-index:2;align-self:end;padding:130px 3vw 8vh 6vw}.eyebrow{margin:0 0 24px;font-size:.7rem;font-weight:600;letter-spacing:.22em}
-h1{margin:0;font:500 clamp(5.2rem,10.5vw,10.5rem)/.76 "Playfair Display",serif;letter-spacing:-.055em}h1 em{font-weight:500}
-.intro{width:min(390px,88%);margin:54px 0 0 auto;padding-top:19px;border-top:1px solid rgba(255,255,255,.45)}.intro p{margin:0 0 25px;font-size:clamp(1rem,1.5vw,1.28rem)}.intro a{font-size:.75rem;letter-spacing:.08em}
-.portrait{position:relative;margin:0;min-height:100svh;overflow:hidden}.portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,42,67,.32),transparent 35%),linear-gradient(0deg,rgba(16,42,67,.22),transparent 38%);pointer-events:none}
-.portrait img{width:100%;height:100%;min-height:100svh;display:block;object-fit:cover;object-position:50% 42%}
-.vertical{position:absolute;z-index:3;right:20px;bottom:25px;margin:0;font-size:.58rem;letter-spacing:.18em;writing-mode:vertical-rl}
-.work{padding:120px 6vw 140px}.heading{display:grid;grid-template-columns:1fr 2.2fr;gap:4vw;padding-bottom:60px}
-h2{max-width:760px;margin:0;font:500 clamp(2.5rem,5vw,5rem)/1.03 "Playfair Display","Noto Sans KR",serif;letter-spacing:-.04em}
-.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px}.project{min-height:330px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;padding:32px;border:1px solid var(--line);background:var(--paper)}
-.featured{grid-row:span 2;min-height:676px;align-items:end;color:var(--paper);background:var(--navy)}.num,.type{margin:0;font-size:.62rem;letter-spacing:.16em}
-.project h3{margin:12px 0 16px;font:500 clamp(2rem,3.4vw,4rem)/1 "Playfair Display","Noto Sans KR",serif}.project p:last-child{max-width:520px;margin-bottom:0;line-height:1.75;font-size:.91rem}
-.about{padding:110px 6vw 130px;color:var(--ivory);background:var(--navy2)}.about-lead{max-width:980px;margin:80px 0 0 auto;font:500 clamp(2.4rem,5.6vw,5.8rem)/1.12 "Playfair Display","Noto Sans KR",serif}
-footer{padding:85px 6vw 35px;background:var(--paper)}footer>p{margin:0 0 50px;font:500 clamp(2.8rem,6vw,6rem) "Playfair Display","Noto Sans KR",serif}.links{display:flex;gap:32px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.78rem}footer small{display:block;margin-top:30px;font-size:.65rem}
-@media(max-width:760px){header{grid-template-columns:1fr auto;padding:19px 20px}nav{display:none}.hero{min-height:auto;display:flex;flex-direction:column}.portrait{order:1;min-height:58svh;height:58svh}.portrait:after{background:linear-gradient(0deg,rgba(16,42,67,.38),transparent 45%)}.portrait img{min-height:0;height:100%;object-position:50% 34%}.hero-copy{order:2;padding:50px 20px 55px}h1{font-size:clamp(4.6rem,23vw,7rem)}.intro{margin:38px 0 0}.vertical{display:none}.work{padding:85px 20px 95px}.heading{display:block;padding-bottom:40px}.grid{grid-template-columns:1fr}.featured{grid-row:auto;min-height:460px}.project{min-height:290px;padding:25px;gap:16px}.about{padding:80px 20px 90px}.about-lead{margin-top:55px}footer{padding:70px 20px 30px}.links{flex-wrap:wrap;gap:18px 25px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="국경을 넘어 소통하는 창작자, 김미령의 포트폴리오">
+  <meta name="theme-color" content="#102a43">
+  <title>김미령 — 포트폴리오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23102a43'/%3E%3Cpath d='M14 44V20h7l11 15 11-15h7v24h-7V31L32 46 21 31v13z' fill='%23f5f0e6'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-2: #244a66;
+      --ivory: #f5f0e6;
+      --paper: #fbf8f1;
+      --ink-soft: #587086;
+      --line: rgba(16, 42, 67, .22);
+      --header-h: 76px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+    body {
+      margin: 0;
+      color: var(--navy);
+      background: var(--ivory);
+      font-family: "DM Sans", "Noto Sans KR", sans-serif;
+    }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .shell { width: min(1440px, 100%); margin: 0 auto; }
+    .eyebrow {
+      margin: 0;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      color: var(--paper);
+      background: rgba(16, 42, 67, .94);
+      border-bottom: 1px solid rgba(255, 255, 255, .16);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 4vw;
+    }
+    .logo { font: 600 1.3rem "Playfair Display", serif; }
+    .desktop-nav { display: flex; align-items: center; gap: clamp(18px, 2vw, 34px); }
+    .desktop-nav a {
+      padding: 8px 0;
+      border-bottom: 1px solid transparent;
+      font-size: .78rem;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a:focus-visible { border-color: currentColor; }
+    .header-actions { justify-self: end; display: flex; align-items: center; gap: 16px; }
+    .lang {
+      padding: 8px 0;
+      color: inherit;
+      background: transparent;
+      border: 0;
+      font-size: .73rem;
+      cursor: pointer;
+    }
+    .lang span { padding: 0 4px; opacity: .45; }
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      color: inherit;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .36);
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      z-index: 90;
+      inset: var(--header-h) 0 0;
+      padding: 44px 24px;
+      color: var(--paper);
+      background: var(--navy);
+    }
+    .mobile-nav.open { display: flex; flex-direction: column; }
+    .mobile-nav a {
+      padding: 17px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      font: 500 clamp(2rem, 10vw, 3.4rem) "Playfair Display", "Noto Sans KR", serif;
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 58% 42%;
+      padding-top: var(--header-h);
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--navy);
+    }
+    .hero-copy {
+      align-self: end;
+      padding: 100px 4vw 9vh 6vw;
+    }
+    h1 {
+      margin: 24px 0 0;
+      font: 500 clamp(5.3rem, 11vw, 11rem)/.78 "Playfair Display", serif;
+      letter-spacing: -.055em;
+    }
+    h1 em { font-weight: 500; }
+    .intro {
+      width: min(420px, 90%);
+      margin: 58px 0 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .45);
+    }
+    .intro p { margin: 0 0 28px; font-size: clamp(1.05rem, 1.5vw, 1.3rem); }
+    .intro a { font-size: .76rem; letter-spacing: .08em; }
+    .hero-visual {
+      position: relative;
+      min-height: calc(100svh - var(--header-h));
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--navy);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.22), transparent 45%),
+        var(--ivory);
+    }
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(16, 42, 67, .24);
+      border-radius: 50%;
+    }
+    .hero-visual::after { width: 44%; }
+    .monogram {
+      position: relative;
+      z-index: 1;
+      font: 500 clamp(7rem, 15vw, 14rem)/1 "Playfair Display", serif;
+      letter-spacing: -.08em;
+    }
+    .visual-note {
+      position: absolute;
+      right: 24px;
+      bottom: 28px;
+      margin: 0;
+      font-size: .62rem;
+      letter-spacing: .16em;
+      writing-mode: vertical-rl;
+    }
+
+    .section { padding: 118px 6vw 132px; }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 2.2fr;
+      gap: 4vw;
+      margin-bottom: 58px;
+    }
+    h2 {
+      max-width: 850px;
+      margin: 0;
+      font: 500 clamp(2.7rem, 5.5vw, 5.4rem)/1.03 "Playfair Display", "Noto Sans KR", serif;
+      letter-spacing: -.04em;
+    }
+
+    .portfolio-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; }
+    .portfolio-card {
+      min-height: 318px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      padding: 31px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .portfolio-card.featured {
+      grid-row: span 2;
+      min-height: 652px;
+      align-items: end;
+      color: var(--paper);
+      background: var(--navy);
+    }
+    .card-number, .card-type { margin: 0; font-size: .64rem; letter-spacing: .15em; }
+    .portfolio-card h3 {
+      margin: 12px 0 16px;
+      font: 500 clamp(2rem, 3.5vw, 4.2rem)/1 "Playfair Display", "Noto Sans KR", serif;
+    }
+    .portfolio-card .placeholder { max-width: 520px; margin: 0; line-height: 1.75; font-size: .92rem; }
+
+    .awards { background: var(--paper); }
+    .timeline { position: relative; max-width: 1040px; margin-left: auto; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 138px;
+      width: 1px;
+      background: var(--line);
+    }
+    .award-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 56px;
+      position: relative;
+      padding: 0 0 52px;
+    }
+    .award-item:last-child { padding-bottom: 0; }
+    .award-year { margin: 4px 0 0; color: var(--ink-soft); font-size: .78rem; letter-spacing: .12em; }
+    .award-item::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 133px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--navy);
+    }
+    .award-content { padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+    .award-content h3 { margin: 0 0 9px; font: 500 clamp(1.5rem, 2.5vw, 2.25rem) "Playfair Display", "Noto Sans KR", serif; }
+    .award-content p { margin: 0 0 18px; color: var(--ink-soft); line-height: 1.7; }
+    .coming-soon { font-size: .72rem; letter-spacing: .08em; }
+
+    .activities { color: var(--ivory); background: var(--navy-2); }
+    .activity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,.22); }
+    .activity-card { min-height: 270px; padding: 34px; background: var(--navy-2); }
+    .activity-card span { font-size: .65rem; letter-spacing: .15em; opacity: .7; }
+    .activity-card h3 { margin: 58px 0 18px; font: 500 clamp(1.8rem, 3vw, 3rem) "Playfair Display", "Noto Sans KR", serif; }
+    .activity-card p { max-width: 430px; margin: 0; line-height: 1.7; opacity: .75; }
+
+    .about { background: var(--ivory); }
+    .about-copy {
+      max-width: 980px;
+      margin: 76px 0 0 auto;
+      font: 500 clamp(2.5rem, 5.8vw, 5.9rem)/1.12 "Playfair Display", "Noto Sans KR", serif;
+      letter-spacing: -.035em;
+    }
+
+    footer { padding: 82px 6vw 34px; background: var(--paper); }
+    .footer-title { margin: 0 0 48px; font: 500 clamp(2.8rem, 6vw, 6rem) "Playfair Display", "Noto Sans KR", serif; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 34px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: .8rem;
+    }
+    footer small { display: block; margin-top: 28px; font-size: .67rem; }
+
+    @media (max-width: 860px) {
+      :root { --header-h: 68px; }
+      .header-inner { grid-template-columns: 1fr auto; padding: 0 20px; }
+      .desktop-nav { display: none; }
+      .menu-button { display: inline-grid; place-items: center; }
+      .hero { min-height: auto; grid-template-columns: 1fr; }
+      .hero-copy { order: 2; padding: 52px 20px 62px; }
+      h1 { font-size: clamp(4.5rem, 23vw, 7rem); }
+      .intro { margin: 40px 0 0; }
+      .hero-visual { order: 1; min-height: 54svh; }
+      .visual-note { display: none; }
+      .section { padding: 84px 20px 94px; }
+      .section-heading { display: block; margin-bottom: 42px; }
+      .section-heading .eyebrow { margin-bottom: 25px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-card.featured { grid-row: auto; min-height: 450px; }
+      .portfolio-card { min-height: 285px; padding: 25px; gap: 16px; }
+      .activity-grid { grid-template-columns: 1fr; }
+      .activity-card { min-height: 235px; padding: 27px; }
+      .timeline { margin: 0; }
+      .timeline::before { left: 6px; }
+      .award-item { grid-template-columns: 1fr; gap: 10px; padding-left: 33px; }
+      .award-item::before { left: 1px; }
+      .about-copy { margin-top: 52px; }
+      footer { padding: 68px 20px 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 <body>
-<header><a class="logo" href="#top">MK.</a><nav><a href="#work" data-ko="작업" data-en="Work">작업</a><a href="#about" data-ko="소개" data-en="About">소개</a><a href="#contact" data-ko="연락" data-en="Contact">연락</a></nav><button class="lang" type="button" aria-label="Switch language">KO <span>/</span> EN</button></header>
-<main id="top">
-<section class="hero"><div class="hero-copy"><p class="eyebrow">PORTFOLIO · 2026</p><h1>Miryeong<br><em>Kim</em></h1><div class="intro"><p data-ko="국경을 넘어 소통하는 창작자" data-en="A creator connecting people across borders.">국경을 넘어 소통하는 창작자</p><a href="#work" data-ko="대표 작업 보기 ↓" data-en="View selected work ↓">대표 작업 보기 ↓</a></div></div><figure class="portrait"><img src="assets/miryeong-portrait.png" alt="졸업복을 입고 지구본 옆에 선 김미령"></figure><p class="vertical">SEOUL · SAPPORO · BEYOND</p></section>
-<section class="work" id="work"><div class="heading"><p class="eyebrow">SELECTED WORK</p><h2 data-ko="아이디어를 세상과 연결한 작업" data-en="Work that connects ideas with the world">아이디어를 세상과 연결한 작업</h2></div>
-<div class="grid"><article class="project featured"><p class="num">01</p><div><p class="type">PRODUCT · COMMUNITY</p><h3>Uriv</h3><p data-ko="홋카이도대학교 교환학생 기간, 대학생 사이의 정보 격차를 줄이기 위해 기획하고 팀을 이끈 온라인 커뮤니티 앱." data-en="A student community app conceived and led during an exchange at Hokkaido University to reduce information gaps on campus.">홋카이도대학교 교환학생 기간, 대학생 사이의 정보 격차를 줄이기 위해 기획하고 팀을 이끈 온라인 커뮤니티 앱.</p></div><span>↗</span></article>
-<article class="project"><p class="num">02</p><div><p class="type">LINGUISTICS · RESEARCH</p><h3 data-ko="SNS 의문문의 물음표" data-en="Question Marks in SNS Language">SNS 의문문의 물음표</h3><p data-ko="지역 방언의 억양과 형태론적 특성이 SNS 언어의 물음표 실현에 미치는 영향을 탐구한 학위논문." data-en="A thesis exploring how dialectal intonation and morphology shape question-mark use in digital communication.">지역 방언의 억양과 형태론적 특성이 SNS 언어의 물음표 실현에 미치는 영향을 탐구한 학위논문.</p></div></article>
-<article class="project"><p class="num">03</p><div><p class="type">WRITING · STORYTELLING</p><h3 data-ko="기사와 콘텐츠" data-en="Articles & Content">기사와 콘텐츠</h3><p data-ko="언어와 사회, 사람의 이야기를 발견하고 독자가 이해하기 쉬운 콘텐츠로 전달합니다." data-en="Stories about language, society, and people—shaped into clear, engaging content.">언어와 사회, 사람의 이야기를 발견하고 독자가 이해하기 쉬운 콘텐츠로 전달합니다.</p></div></article></div></section>
-<section class="about" id="about"><p class="eyebrow">ABOUT</p><p class="about-lead" data-ko="언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다." data-en="I move across languages and cultures, turning the problems I find into stories and projects.">언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다.</p></section>
-</main>
-<footer id="contact"><p data-ko="함께 이야기해요." data-en="Let's start a conversation.">함께 이야기해요.</p><div class="links"><span data-ko="이메일 준비 중" data-en="Email coming soon">이메일 준비 중</span><span>CV</span><span data-ko="글쓰기 채널" data-en="Writing">글쓰기 채널</span></div><small>© 2026 Miryeong Kim</small></footer>
-<script>
-const b=document.querySelector(".lang");let l=localStorage.getItem("language")||"ko";function setLang(n){l=n;document.documentElement.lang=l;document.querySelectorAll("[data-ko][data-en]").forEach(e=>e.textContent=e.dataset[l]);document.title=l==="ko"?"김미령 — 포트폴리오":"Miryeong Kim — Portfolio";localStorage.setItem("language",l)}b.addEventListener("click",()=>setLang(l==="ko"?"en":"ko"));setLang(l);
-</script>
-</body></html>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="logo" href="#home" aria-label="홈">MK.</a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#home" data-ko="홈" data-en="Home">홈</a>
+        <a href="#portfolio" data-ko="포트폴리오" data-en="Portfolio">포트폴리오</a>
+        <a href="#awards" data-ko="수상내역" data-en="Awards">수상내역</a>
+        <a href="#activities" data-ko="활동내역" data-en="Activities">활동내역</a>
+        <a href="#about" data-ko="소개" data-en="About">소개</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang" type="button" aria-label="언어 전환">KO <span>/</span> EN</button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-menu" aria-label="모바일 메뉴">
+    <a href="#home" data-ko="홈" data-en="Home">홈</a>
+    <a href="#portfolio" data-ko="포트폴리오" data-en="Portfolio">포트폴리오</a>
+    <a href="#awards" data-ko="수상내역" data-en="Awards">수상내역</a>
+    <a href="#activities" data-ko="활동내역" data-en="Activities">활동내역</a>
+    <a href="#about" data-ko="소개" data-en="About">소개</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio · 2026</p>
+        <h1>Miryeong<br><em>Kim</em></h1>
+        <div class="intro">
+          <p data-ko="국경을 넘어 소통하는 창작자" data-en="A creator connecting people across borders.">국경을 넘어 소통하는 창작자</p>
+          <a href="#portfolio" data-ko="대표 작업 보기 ↓" data-en="View selected work ↓">대표 작업 보기 ↓</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="표지 이미지 영역">
+        <span class="monogram" aria-hidden="true">MK</span>
+        <p class="visual-note">SEOUL · SAPPORO · BEYOND</p>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 data-ko="아이디어를 세상과 연결한 작업" data-en="Work that connects ideas with the world">아이디어를 세상과 연결한 작업</h2>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card featured">
+          <p class="card-number">01</p>
+          <div>
+            <p class="card-type">Featured project</p>
+            <h3>Uriv</h3>
+            <p class="placeholder" data-ko="대표 프로젝트의 문제의식, 과정, 결과를 소개할 영역입니다." data-en="This section will introduce the challenge, process, and result of the featured project.">대표 프로젝트의 문제의식, 과정, 결과를 소개할 영역입니다.</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </article>
+        <article class="portfolio-card">
+          <p class="card-number">02</p>
+          <div>
+            <p class="card-type">Research</p>
+            <h3 data-ko="연구" data-en="Research">연구</h3>
+            <p class="placeholder" data-ko="대표 연구 작업이 들어갈 영역입니다." data-en="Selected research work will be added here.">대표 연구 작업이 들어갈 영역입니다.</p>
+          </div>
+        </article>
+        <article class="portfolio-card">
+          <p class="card-number">03</p>
+          <div>
+            <p class="card-type">Writing · Planning</p>
+            <h3 data-ko="글과 기획" data-en="Writing & Planning">글과 기획</h3>
+            <p class="placeholder" data-ko="대표 기사와 기획 작업이 들어갈 영역입니다." data-en="Selected articles and planning work will be added here.">대표 기사와 기획 작업이 들어갈 영역입니다.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section awards" id="awards">
+      <div class="section-heading">
+        <p class="eyebrow">Awards</p>
+        <h2 data-ko="도전이 만든 성과" data-en="Recognition earned through challenges">도전이 만든 성과</h2>
+      </div>
+      <div class="timeline">
+        <article class="award-item">
+          <p class="award-year" data-ko="연도" data-en="Year">연도</p>
+          <div class="award-content">
+            <h3 data-ko="수상내역 01" data-en="Award 01">수상내역 01</h3>
+            <p data-ko="수상명, 주최 기관, 한 줄 설명이 들어갈 자리입니다." data-en="Award title, organizer, and a short description will appear here.">수상명, 주최 기관, 한 줄 설명이 들어갈 자리입니다.</p>
+            <span class="coming-soon" data-ko="상세 페이지 준비 중 →" data-en="Detail page coming soon →">상세 페이지 준비 중 →</span>
+          </div>
+        </article>
+        <article class="award-item">
+          <p class="award-year" data-ko="연도" data-en="Year">연도</p>
+          <div class="award-content">
+            <h3 data-ko="수상내역 02" data-en="Award 02">수상내역 02</h3>
+            <p data-ko="관련 기사, 발표자료, 이미지로 연결될 영역입니다." data-en="This area will link to articles, presentations, and images.">관련 기사, 발표자료, 이미지로 연결될 영역입니다.</p>
+            <span class="coming-soon" data-ko="상세 페이지 준비 중 →" data-en="Detail page coming soon →">상세 페이지 준비 중 →</span>
+          </div>
+        </article>
+        <article class="award-item">
+          <p class="award-year" data-ko="연도" data-en="Year">연도</p>
+          <div class="award-content">
+            <h3 data-ko="수상내역 03" data-en="Award 03">수상내역 03</h3>
+            <p data-ko="역할과 기여, 성과를 소개할 영역입니다." data-en="Your role, contribution, and result will be introduced here.">역할과 기여, 성과를 소개할 영역입니다.</p>
+            <span class="coming-soon" data-ko="상세 페이지 준비 중 →" data-en="Detail page coming soon →">상세 페이지 준비 중 →</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section activities" id="activities">
+      <div class="section-heading">
+        <p class="eyebrow">Activities</p>
+        <h2 data-ko="경계를 넓혀 온 활동" data-en="Experiences that expanded my horizons">경계를 넓혀 온 활동</h2>
+      </div>
+      <div class="activity-grid">
+        <article class="activity-card">
+          <span>01</span>
+          <h3 data-ko="프로젝트·기획" data-en="Projects & Planning">프로젝트·기획</h3>
+          <p data-ko="기획과 실행 경험을 정리할 영역입니다." data-en="Project planning and execution experiences will be added here.">기획과 실행 경험을 정리할 영역입니다.</p>
+        </article>
+        <article class="activity-card">
+          <span>02</span>
+          <h3 data-ko="글쓰기·대외활동" data-en="Writing & Public Activities">글쓰기·대외활동</h3>
+          <p data-ko="기자단과 콘텐츠 활동을 정리할 영역입니다." data-en="Writing, reporting, and content activities will be added here.">기자단과 콘텐츠 활동을 정리할 영역입니다.</p>
+        </article>
+        <article class="activity-card">
+          <span>03</span>
+          <h3 data-ko="국제 경험·언어" data-en="Global Experience & Languages">국제 경험·언어</h3>
+          <p data-ko="교환학생과 언어 관련 경험을 정리할 영역입니다." data-en="Exchange and language-related experiences will be added here.">교환학생과 언어 관련 경험을 정리할 영역입니다.</p>
+        </article>
+        <article class="activity-card">
+          <span>04</span>
+          <h3 data-ko="스포츠·교육" data-en="Sports & Education">스포츠·교육</h3>
+          <p data-ko="피겨스케이팅과 교육 경험을 정리할 영역입니다." data-en="Figure skating and teaching experiences will be added here.">피겨스케이팅과 교육 경험을 정리할 영역입니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <p class="eyebrow">About</p>
+      <p class="about-copy" data-ko="언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다." data-en="I move across languages and cultures, turning the problems I find into stories and projects.">언어와 문화의 경계를 넘나들며, 발견한 문제를 글과 프로젝트로 풀어냅니다.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-title" data-ko="함께 이야기해요." data-en="Let's start a conversation.">함께 이야기해요.</p>
+    <div class="footer-links">
+      <span data-ko="이메일 준비 중" data-en="Email coming soon">이메일 준비 중</span>
+      <span data-ko="이력서 준비 중" data-en="CV coming soon">이력서 준비 중</span>
+      <span data-ko="글쓰기 채널 준비 중" data-en="Writing channel coming soon">글쓰기 채널 준비 중</span>
+    </div>
+    <small>© 2026 Miryeong Kim</small>
+  </footer>
+
+  <script>
+    const languageButton = document.querySelector(".lang");
+    const menuButton = document.querySelector(".menu-button");
+    const mobileMenu = document.querySelector(".mobile-nav");
+    let language = localStorage.getItem("language") || "ko";
+
+    function setLanguage(nextLanguage) {
+      language = nextLanguage;
+      document.documentElement.lang = language;
+      document.querySelectorAll("[data-ko][data-en]").forEach((element) => {
+        element.textContent = element.dataset[language];
+      });
+      document.title = language === "ko" ? "김미령 — 포트폴리오" : "Miryeong Kim — Portfolio";
+      localStorage.setItem("language", language);
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", language === "ko" ? "메뉴 열기" : "Open menu");
+      menuButton.textContent = "☰";
+    }
+
+    languageButton.addEventListener("click", () => {
+      setLanguage(language === "ko" ? "en" : "ko");
+      if (!mobileMenu.classList.contains("open")) {
+        menuButton.setAttribute("aria-label", language === "ko" ? "메뉴 열기" : "Open menu");
+      }
+    });
+
+    menuButton.addEventListener("click", () => {
+      const willOpen = !mobileMenu.classList.contains("open");
+      mobileMenu.classList.toggle("open", willOpen);
+      document.body.classList.toggle("menu-open", willOpen);
+      menuButton.setAttribute("aria-expanded", String(willOpen));
+      menuButton.setAttribute("aria-label", willOpen
+        ? (language === "ko" ? "메뉴 닫기" : "Close menu")
+        : (language === "ko" ? "메뉴 열기" : "Open menu"));
+      menuButton.textContent = willOpen ? "×" : "☰";
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    setLanguage(language);
+  </script>
+</body>
+</html>
